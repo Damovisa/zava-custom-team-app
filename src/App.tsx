@@ -98,15 +98,22 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen bg-background flex flex-col app-background">
       {/* Design Helper */}
       <DesignHelper />
       
       {/* Header */}
       <header className="border-b py-4 px-6 bg-primary text-primary-foreground">
-        <div className="max-w-7xl mx-auto w-full">
-          <h1 className="text-2xl font-bold">Zava Athletics</h1>
-          <p className="text-sm opacity-80">Custom Apparel Designer</p>
+        <div className="max-w-7xl mx-auto w-full flex items-center">
+          <img 
+            src="/public/ZavaLogo.png" 
+            alt="Zava Athletics Logo" 
+            className="h-10 mr-3"
+          />
+          <div>
+            <h1 className="text-2xl font-bold">Zava Athletics</h1>
+            <p className="text-sm opacity-80">Custom Apparel Designer</p>
+          </div>
         </div>
       </header>
 
@@ -116,7 +123,7 @@ function App() {
           {/* Left column - Customization controls */}
           <div className="space-y-6">
             <Tabs value={currentStep} onValueChange={setCurrentStep} className="w-full">
-              <TabsList className="grid w-full grid-cols-3">
+              <TabsList className="grid w-full grid-cols-3 bg-white/80 backdrop-blur-sm">
                 <TabsTrigger value="product" className="data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
                   1. Product
                 </TabsTrigger>
@@ -453,7 +460,7 @@ function App() {
           {/* Right column - Product visualization */}
           <div>
             <div className="sticky top-8">
-              <Card className="bg-transparent border-dashed">
+              <Card className="border-dashed bg-white/80 backdrop-blur-md">
                 <CardHeader className="bg-transparent">
                   <div className="flex justify-between items-center">
                     <div>
@@ -487,7 +494,7 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="py-6 px-6 border-t">
+      <footer className="py-6 px-6 border-t bg-white/70 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto text-center text-sm text-muted-foreground">
           © {new Date().getFullYear()} Zava Athletics. All rights reserved.
         </div>

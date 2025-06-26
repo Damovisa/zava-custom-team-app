@@ -111,6 +111,13 @@ button, .button {
 }
 
 /* Custom app styles */
+.app-background {
+  background-image: url('/public/ZavaBackground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .product-preview {
   transition: transform 0.3s ease-in-out;
 }
@@ -133,6 +140,14 @@ button, .button {
 
 .custom-file-upload:hover {
   background-color: hsl(var(--primary) / 0.9);
+}
+
+/* Custom card styling with glass effect */
+.card {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 /* Transparent checkerboard background for white product items */

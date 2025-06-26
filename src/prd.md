@@ -58,6 +58,8 @@
 - **Design Personality**: Modern, premium, sporty
 - **Visual Metaphors**: Athletic equipment, team jerseys, professional sports
 - **Simplicity Spectrum**: Clean, focused interface that emphasizes the product visualization
+- **Background Image**: Sports-themed background image enhances the athletic nature of the application
+- **Brand Representation**: Zava logo prominently displayed in header to reinforce brand identity
 
 ### Color Strategy
 - **Color Scheme Type**: Custom palette with sports-inspired accents
@@ -89,6 +91,7 @@
 - **Grid System**: 12-column grid with responsive breakpoints
 - **Responsive Approach**: Controls stack vertically on mobile, with product visualization above
 - **Content Density**: Focused, with one customization category visible at a time
+- **Glassmorphism Effect**: Semi-transparent cards with backdrop blur for a modern look that integrates with the background image
 
 ### Animations
 - **Purposeful Meaning**: Smooth transitions between product views, subtle hover states on interactive elements
