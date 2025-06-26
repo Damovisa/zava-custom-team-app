@@ -19,14 +19,14 @@
   --popover-foreground: #0f1419;
 
   /* Action colors */
-  --primary: #1e9df1;
+  --primary: oklch(58.8% 0.158 241.966);
   --primary-foreground: #ffffff;
   
   --secondary: #0f1419;
   --secondary-foreground: #ffffff;
   
   --accent: #E3ECF6;
-  --accent-foreground: #1e9df1;
+  --accent-foreground: oklch(42.4% 0.199 265.638);
   
   --destructive: #f4212e;
   --destructive-foreground: #ffffff;
@@ -40,7 +40,7 @@
   --ring: #1da1f2;
 
   /* Border radius */
-  --radius: 1.3rem;
+  --radius: 0.3rem;
   --chart-1: #1e9df1;
   --chart-2: #00b87a;
   --chart-3: #f7b928;
