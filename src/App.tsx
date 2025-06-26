@@ -449,8 +449,8 @@ function App() {
           {/* Right column - Product visualization */}
           <div>
             <div className="sticky top-8">
-              <Card>
-                <CardHeader>
+              <Card className="bg-transparent border-dashed">
+                <CardHeader className="bg-transparent">
                   <div className="flex justify-between items-center">
                     <div>
                       <CardTitle className="flex items-center gap-2">
@@ -463,7 +463,7 @@ function App() {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="bg-transparent">
                   <div className="flex justify-center">
                     <ProductVisualization 
                       productType={productType}

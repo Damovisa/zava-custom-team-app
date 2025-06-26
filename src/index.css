@@ -134,3 +134,33 @@ button, .button {
 .custom-file-upload:hover {
   background-color: hsl(var(--primary) / 0.9);
 }
+
+/* Transparent checkerboard background for white product items */
+.product-visualization {
+  position: relative;
+}
+
+.product-visualization svg {
+  z-index: 1;
+  position: relative;
+}
+
+/* Create a subtle checkerboard pattern for white products */
+.product-base {
+  position: relative;
+}
+
+.product-base::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0),
+                    linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  opacity: 0.2;
+  z-index: 0;
+}
