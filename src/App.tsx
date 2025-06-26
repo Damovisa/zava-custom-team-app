@@ -27,14 +27,14 @@ function App() {
 
   // Set default sport when component mounts
   useEffect(() => {
-    if (sportsData.length > 0) {
+    if (sportsData && sportsData.length > 0) {
       setSelectedSport(sportsData[0]);
     }
   }, []);
 
   // Reset league and team when sport changes
   useEffect(() => {
-    if (selectedSport && selectedSport.leagues.length > 0) {
+    if (selectedSport && selectedSport.leagues && selectedSport.leagues.length > 0) {
       setSelectedLeague(selectedSport.leagues[0]);
       setSelectedTeam(null);
     } else {
@@ -45,7 +45,7 @@ function App() {
 
   // Reset team when league changes
   useEffect(() => {
-    if (selectedLeague && selectedLeague.teams.length > 0) {
+    if (selectedLeague && selectedLeague.teams && selectedLeague.teams.length > 0) {
       setSelectedTeam(selectedLeague.teams[0]);
     } else {
       setSelectedTeam(null);
@@ -323,7 +323,7 @@ function App() {
                           <SelectValue placeholder="Select League" />
                         </SelectTrigger>
                         <SelectContent>
-                          {selectedSport?.leagues.map((league) => (
+                          {selectedSport?.leagues && selectedSport.leagues.map((league) => (
                             <SelectItem key={league.id} value={league.id}>
                               {league.name}
                             </SelectItem>
@@ -346,7 +346,7 @@ function App() {
                           <SelectValue placeholder="Select Team" />
                         </SelectTrigger>
                         <SelectContent>
-                          {selectedLeague?.teams.map((team) => (
+                          {selectedLeague?.teams && selectedLeague.teams.map((team) => (
                             <SelectItem key={team.id} value={team.id}>
                               {team.name}
                             </SelectItem>

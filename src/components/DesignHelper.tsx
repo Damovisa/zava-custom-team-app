@@ -42,7 +42,7 @@ export function DesignHelper() {
       // Generate a prompt for the design helper AI
       const prompt = spark.llmPrompt`You are a clothing design assistant for Zava Athletics. 
       Help the user with clothing design tips and suggestions.
-      Previous conversation: ${JSON.stringify(messages)}
+      Previous conversation: ${JSON.stringify(messages || [])}
       User message: ${input.trim()}
       Provide a helpful, concise response with specific design advice. Limit your response to 3-4 sentences.`;
       
@@ -95,14 +95,14 @@ export function DesignHelper() {
 
         {/* Messages area */}
         <ScrollArea className="flex-1 px-4 py-4">
-          {messages.length === 0 ? (
+          {(!messages || messages.length === 0) ? (
             <div className="flex flex-col items-center justify-center h-full text-center text-muted-foreground p-4">
               <AlertCircle size={40} className="mb-4 opacity-50" />
               <p>No messages yet. Ask the design helper about color combinations, style advice, or personalization tips!</p>
             </div>
           ) : (
             <div className="space-y-4">
-              {messages.map((message, index) => (
+              {messages && messages.map((message, index) => (
                 <div
                   key={index}
                   className={cn(
