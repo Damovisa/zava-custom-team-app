@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ProductVisualization } from "@/components/ProductVisualization";
 import { WebcamCapture } from "@/components/WebcamCapture";
-import { ProductType, colorOptions, sportsData, Sport, League, Team } from "@/lib/data";
+import { ProductType, colorOptions, textColorOptions, sportsData, Sport, League, Team } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -16,6 +16,7 @@ function App() {
   // State for product customization
   const [productType, setProductType] = useState<ProductType>("t-shirt");
   const [selectedColor, setSelectedColor] = useState(colorOptions[0].value);
+  const [selectedTextColor, setSelectedTextColor] = useState(textColorOptions[0].value);
   const [selectedSport, setSelectedSport] = useState<Sport | null>(null);
   const [selectedLeague, setSelectedLeague] = useState<League | null>(null);
   const [selectedTeam, setSelectedTeam] = useState<Team | null>(null);
@@ -223,6 +224,49 @@ function App() {
                   </CardContent>
                 </Card>
 
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Choose Text Color</CardTitle>
+                    <CardDescription>Select the color for your text and name</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <RadioGroup 
+                      value={selectedTextColor}
+                      onValueChange={setSelectedTextColor}
+                      className="grid grid-cols-5 gap-3"
+                    >
+                      {textColorOptions.map((color) => (
+                        <Label
+                          key={color.value}
+                          htmlFor={`text-color-${color.value.substring(1)}`}
+                          className="cursor-pointer flex flex-col items-center"
+                        >
+                          <RadioGroupItem 
+                            value={color.value} 
+                            id={`text-color-${color.value.substring(1)}`} 
+                            className="sr-only" 
+                          />
+                          <div className="relative mb-2">
+                            <div 
+                              className="h-10 w-10 rounded-full shadow-sm transition-all"
+                              style={{ 
+                                backgroundColor: color.value,
+                                border: color.value === "#FFFFFF" ? "1px solid #e2e8f0" : "none",
+                              }}
+                            />
+                            {selectedTextColor === color.value && (
+                              <div className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center">
+                                <Check size={12} weight="bold" />
+                              </div>
+                            )}
+                          </div>
+                          <span className="text-xs text-center">{color.name}</span>
+                        </Label>
+                      ))}
+                    </RadioGroup>
+                  </CardContent>
+                </Card>
+
                 <div className="flex justify-end">
                   <Button onClick={goToNextStep}>
                     Continue to Team Selection
@@ -414,7 +458,7 @@ function App() {
                         {productType.charAt(0).toUpperCase() + productType.slice(1)} Preview
                       </CardTitle>
                       <CardDescription>
-                        {selectedTeam ? selectedTeam.name : "Custom"} {productType} in {colorOptions.find(c => c.value === selectedColor)?.name}
+                        {selectedTeam ? selectedTeam.name : "Custom"} {productType} in {colorOptions.find(c => c.value === selectedColor)?.name} with {textColorOptions.find(c => c.value === selectedTextColor)?.name} text
                       </CardDescription>
                     </div>
                   </div>
@@ -424,6 +468,7 @@ function App() {
                     <ProductVisualization 
                       productType={productType}
                       color={selectedColor}
+                      textColor={selectedTextColor}
                       teamName={selectedTeam?.name}
                       userName={userName}
                       customImage={customImage || undefined}

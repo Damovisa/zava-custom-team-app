@@ -22,9 +22,9 @@
    - Success criteria: All product types display correctly and are selectable
 
 2. **Color Selection**
-   - What it does: Provides color options for the selected product
+   - What it does: Provides color options for the selected product and text
    - Why it matters: Gives users creative control over their design
-   - Success criteria: Color changes apply correctly to the product visualization
+   - Success criteria: Color changes apply correctly to both the product and text in the visualization
 
 3. **Sports Affiliation**
    - What it does: Hierarchical selection of sport, league, and team

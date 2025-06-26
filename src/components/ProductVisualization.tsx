@@ -5,6 +5,7 @@ import { ProductType } from "@/lib/data";
 interface ProductVisualizationProps {
   productType: ProductType;
   color: string;
+  textColor?: string;
   teamName?: string;
   userName?: string;
   customImage?: string;
@@ -14,6 +15,7 @@ interface ProductVisualizationProps {
 export function ProductVisualization({
   productType,
   color,
+  textColor = "#FFFFFF",
   teamName,
   userName,
   customImage,
@@ -29,7 +31,7 @@ export function ProductVisualization({
     }, 500);
     
     return () => clearTimeout(timer);
-  }, [productType, color]);
+  }, [productType, color, textColor]);
 
   // Get the product image based on the type
   const getProductImage = () => {
@@ -195,7 +197,7 @@ export function ProductVisualization({
                   y={productType === "cap" ? "130" : "100"} 
                   fontSize="14" 
                   textAnchor="middle" 
-                  fill={color === "#000000" ? "#FFFFFF" : "#000000"}
+                  fill={textColor}
                   fontFamily="Montserrat, sans-serif"
                   fontWeight="bold"
                 >
@@ -210,7 +212,7 @@ export function ProductVisualization({
                   y="220" 
                   fontSize="16" 
                   textAnchor="middle" 
-                  fill={color === "#000000" ? "#FFFFFF" : "#000000"}
+                  fill={textColor}
                   fontFamily="Montserrat, sans-serif"
                   fontWeight="bold"
                 >

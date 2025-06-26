@@ -38,6 +38,16 @@ export const colorOptions: ColorOption[] = [
   { name: "Orange", value: "#FF7F00" },
 ];
 
+// Text color options
+export const textColorOptions: ColorOption[] = [
+  { name: "White", value: "#FFFFFF" },
+  { name: "Black", value: "#000000" },
+  { name: "Gold", value: "#FFD700" },
+  { name: "Silver", value: "#C0C0C0" },
+  { name: "Red", value: "#D80032" },
+  { name: "Royal Blue", value: "#0047AB" },
+];
+
 // Available sports, leagues and teams data
 export const sportsData: Sport[] = [
   {
