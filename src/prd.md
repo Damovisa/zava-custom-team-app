@@ -13,7 +13,7 @@
 - **Core Problem Analysis**: Customers want personalized team apparel that represents their identity and sports affiliations.
 - **User Context**: Users will engage with this application when they want to purchase custom team apparel, likely on both mobile and desktop devices.
 - **Critical Path**: Select product type → Choose colors → Select sport/league/team → Add personalization → View and confirm design
-- **Key Moments**: Product visualization updating in real-time, successful webcam photo capture, final product visualization
+- **Key Moments**: Product visualization updating in real-time, successful webcam photo capture, final product visualization, seamless navigation between customization steps
 
 ## Essential Features
 1. **Product Selection**
@@ -40,6 +40,11 @@
    - What it does: Shows a real-time rendering of the customized product
    - Why it matters: Gives users immediate feedback on their design choices
    - Success criteria: Visualization accurately reflects all user customization choices
+
+6. **Navigation System**
+   - What it does: Allows users to freely navigate between customization steps
+   - Why it matters: Provides flexibility to revisit and edit previous selections
+   - Success criteria: Users can click directly on step tabs to navigate between sections
 
 ## Design Direction
 

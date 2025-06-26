@@ -110,15 +110,15 @@ function App() {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
           {/* Left column - Customization controls */}
           <div className="space-y-6">
-            <Tabs value={currentStep} className="w-full">
+            <Tabs value={currentStep} onValueChange={setCurrentStep} className="w-full">
               <TabsList className="grid w-full grid-cols-3">
-                <TabsTrigger value="product" disabled={currentStep !== "product"} className="data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
+                <TabsTrigger value="product" className="data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
                   1. Product
                 </TabsTrigger>
-                <TabsTrigger value="team" disabled={currentStep !== "team"} className="data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
+                <TabsTrigger value="team" className="data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
                   2. Team
                 </TabsTrigger>
-                <TabsTrigger value="personalize" disabled={currentStep !== "personalize"} className="data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
+                <TabsTrigger value="personalize" className="data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
                   3. Personalize
                 </TabsTrigger>
               </TabsList>
