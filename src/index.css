@@ -1,1 +1,114 @@
-/* This is where custom CSS goes */
+@import 'tailwindcss';
+@import "tw-animate-css";
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
+
+:root {
+  /* Base colors */
+  --background: 0 0% 100%;
+  --foreground: 221 65% 15%;
+
+  --card: 210 20% 98%;
+  --card-foreground: 221 65% 15%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 221 65% 15%;
+
+  /* Action colors */
+  --primary: 221 75% 15%;
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 347 100% 42%;
+  --secondary-foreground: 0 0% 100%;
+  
+  --accent: 42 100% 50%;
+  --accent-foreground: 221 65% 15%;
+  
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+
+  /* Supporting UI colors */
+  --muted: 210 20% 94%;
+  --muted-foreground: 221 35% 35%;
+  
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 221 75% 15%;
+
+  /* Border radius */
+  --radius: 0.5rem;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Map radius variables */
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) * 1.5);
+  --radius-xl: calc(var(--radius) * 2);
+  --radius-2xl: calc(var(--radius) * 3);
+  --radius-full: 9999px;
+}
+
+/* Custom font styles */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+button, .button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+/* Custom app styles */
+.product-preview {
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-preview:hover {
+  transform: scale(1.02);
+}
+
+.webcam-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.custom-file-upload {
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.custom-file-upload:hover {
+  background-color: hsl(var(--primary) / 0.9);
+}
