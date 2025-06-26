@@ -13,7 +13,7 @@
 - **Core Problem Analysis**: Customers want personalized team apparel that represents their identity and sports affiliations.
 - **User Context**: Users will engage with this application when they want to purchase custom team apparel, likely on both mobile and desktop devices.
 - **Critical Path**: Select product type → Choose colors → Select sport/league/team → Add personalization → View and confirm design
-- **Key Moments**: Product visualization updating in real-time, successful webcam photo capture, final product visualization, seamless navigation between customization steps
+- **Key Moments**: Product visualization updating in real-time, successful webcam photo capture, receiving helpful AI design advice, final product visualization, seamless navigation between customization steps
 
 ## Essential Features
 1. **Product Selection**
@@ -45,6 +45,11 @@
    - What it does: Allows users to freely navigate between customization steps
    - Why it matters: Provides flexibility to revisit and edit previous selections
    - Success criteria: Users can click directly on step tabs to navigate between sections
+
+7. **Design Helper**
+   - What it does: Provides AI-assisted design suggestions and advice through a chat interface
+   - Why it matters: Helps users who are unsure about design choices or need creative inspiration
+   - Success criteria: Users can get contextual design advice and apply suggestions to their designs
 
 ## Design Direction
 
@@ -91,7 +96,7 @@
 - **Contextual Appropriateness**: Subtle transitions for form elements, more pronounced animations for product changes
 
 ### UI Elements & Component Selection
-- **Component Usage**: Cards for product selection, radio groups for options, modal dialogs for image capture
+- **Component Usage**: Cards for product selection, radio groups for options, modal dialogs for image capture, sheet component for the AI design helper
 - **Component Customization**: Sports-themed styling for buttons and selection controls
 - **Component States**: Clear hover/active states for all interactive elements
 - **Icon Selection**: Sports-themed icons where appropriate, standard UI icons for navigation

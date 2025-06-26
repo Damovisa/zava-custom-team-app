@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ProductVisualization } from "@/components/ProductVisualization";
 import { WebcamCapture } from "@/components/WebcamCapture";
+import { DesignHelper } from "@/components/DesignHelper";
 import { ProductType, colorOptions, textColorOptions, sportsData, Sport, League, Team } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -98,6 +99,9 @@ function App() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      {/* Design Helper */}
+      <DesignHelper />
+      
       {/* Header */}
       <header className="border-b py-4 px-6 bg-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto w-full">
