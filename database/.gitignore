@@ -1,0 +1,28 @@
+# Database-specific gitignore
+
+# SQL Server database files
+*.mdf
+*.ldf
+*.ndf
+*.bak
+
+# Log files
+*.log
+*.tlog
+
+# Temporary files
+*.tmp
+temp/
+logs/
+
+# Local database connection files
+connection.txt
+*.config
+
+# Output files from test runs
+test_output.txt
+test_results.xml
+
+# Local environment files
+.env.local
+local_settings.txt
